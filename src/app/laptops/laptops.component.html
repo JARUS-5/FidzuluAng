@@ -1,44 +1,46 @@
 <article>
-    <div class="country">
-  
-      <div class="btn-group mr-3">
-          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-          <button class="btn btn-outline-primary specialize" ngbDropdownToggle>Choose Country</button>
-          <div class="dropdown-menu specialize" ngbDropdownMenu>
-            <button ngbDropdownItem>India</button>
-            <button ngbDropdownItem>USA</button>
-  
-          </div>
+  <div class="country">
+
+    <div class="btn-group mr-3">
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+        <button class="btn btn-outline-primary specialize" ngbDropdownToggle>Choose Country</button>
+        <div class="dropdown-menu specialize" ngbDropdownMenu>
+          <button ngbDropdownItem (click)="india()">India</button>
+          <button ngbDropdownItem (click)="usa()">USA</button>
+
         </div>
       </div>
-  
     </div>
-  
-  </article>
-  
-<div class="Bikes">
+
+  </div>
+
+</article>
+
+  <div class="Books" >
     <div class="table">
-  
+
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>Product</th>
+            <th>Brand</th>
+            <th>CPU</th>
+            <th>Memory</th>
+            <th>Price</th>
           </tr>
          </thead>
-        <tbody >
+        <tbody *ngFor="let laptop of laptops" >
           <tr>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
-           <td></td>
+           <td>{{laptop.product}}</td>
+           <td>{{laptop.brand}}</td>
+           <td>{{laptop.CPU}}</td>
+           <td>{{laptop.memory}}</td>
+           <td>{{laptop.price}}</td>
           </tr>
         </tbody>
       </table>
-  
+
     </div>
+
   </div>
+  

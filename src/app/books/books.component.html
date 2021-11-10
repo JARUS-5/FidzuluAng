@@ -5,8 +5,8 @@
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
           <button class="btn btn-outline-primary specialize" ngbDropdownToggle>Choose Country</button>
           <div class="dropdown-menu specialize" ngbDropdownMenu>
-            <button ngbDropdownItem>India</button>
-            <button ngbDropdownItem>USA</button>
+            <button ngbDropdownItem (click)="india()">India</button>
+            <button ngbDropdownItem (click)="usa()">USA</button>
   
           </div>
         </div>
@@ -29,13 +29,13 @@
             <th>Publisher</th>
           </tr>
          </thead>
-        <tbody >
+        <tbody *ngFor="let book of books" >
           <tr>
-           <td>title</td>
-           <td>author</td>
-           <td>price</td>
-           <td>isbn</td>
-           <td>publisher</td>
+           <td>{{book.Title}}</td>
+           <td>{{book.Author}}</td>
+           <td>{{book.price}}</td>
+           <td>{{book.ISBN}}</td>
+           <td>{{book.publisher}}</td>
           </tr>
         </tbody>
       </table>
