@@ -1,21 +1,21 @@
 <article>
     <div class="country">
-  
+
       <div class="btn-group mr-3">
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
           <button class="btn btn-outline-primary specialize" ngbDropdownToggle>Choose Country</button>
           <div class="dropdown-menu specialize" ngbDropdownMenu>
             <button ngbDropdownItem (click)="india()">India</button>
             <button ngbDropdownItem (click)="usa()">USA</button>
-  
+
           </div>
         </div>
       </div>
-  
+
     </div>
-  
+
   </article>
-  
+
 <div class="Books" >
     <div class="table">
 
@@ -31,10 +31,10 @@
          </thead>
         <tbody *ngFor="let book of books" >
           <tr>
-           <td>{{book.Title}}</td>
-           <td>{{book.Author}}</td>
+           <td>{{book.title}}</td>
+           <td>{{book.author}}</td>
            <td>{{book.price}}</td>
-           <td>{{book.ISBN}}</td>
+           <td>{{book.isbn}}</td>
            <td>{{book.publisher}}</td>
           </tr>
         </tbody>
