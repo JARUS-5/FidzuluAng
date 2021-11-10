@@ -1,18 +1,46 @@
 <article>
-    <div class="country">
-  
-      <div class="btn-group mr-3">
-          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-          <button class="btn btn-outline-primary specialize" ngbDropdownToggle>Choose Country</button>
-          <div class="dropdown-menu specialize" ngbDropdownMenu>
-            <button ngbDropdownItem>India</button>
-            <button ngbDropdownItem>USA</button>
-  
-          </div>
+  <div class="country">
+
+    <div class="btn-group mr-3">
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+        <button class="btn btn-outline-primary specialize" ngbDropdownToggle>Choose Country</button>
+        <div class="dropdown-menu specialize" ngbDropdownMenu>
+          <button ngbDropdownItem (click)="india()">India</button>
+          <button ngbDropdownItem (click)="usa()">USA</button>
+
         </div>
       </div>
-  
     </div>
-  
-  </article>
+
+  </div>
+
+</article>
+
+  <div class="Books" >
+    <div class="table">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Age Group</th>
+            <th>Price</th>
+    
+          </tr>
+         </thead>
+        <tbody *ngFor="let toy of toys" >
+          <tr>
+           <td>{{toy.name}}</td>
+           <td>{{toy.brand}}</td>
+           <td>3 to 9</td>
+           <td>{{toy.price}}</td>
+          
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
   
