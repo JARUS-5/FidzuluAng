@@ -1,9 +1,9 @@
 export class Books{
 
-    title!:string;
-    author!:string;
+    Title!:string;
+    Author!:string;
     price!:string;
-    isbn!:string;
+    ISBN!:string;
     publisher!:string
 
   }
